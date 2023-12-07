@@ -1,0 +1,14 @@
+@import "../../utils/variables.scss";
+
+.projects {
+  margin-top: 50px;
+
+  @include onDesktop {
+    margin-top: 246px;
+  }
+}
+
+.card-container {
+@include pageGrid;
+margin-top: 36px;
+}

@@ -1,0 +1,31 @@
+@import './utils/variables.scss';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap';
+
+body {
+  margin: 0;
+}
+
+.main {
+  box-sizing: border-box;
+  padding: 16px 16px 50px;
+  background-color: $Bacground-dark;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  color: $Gray-text;
+
+  @include onTablet {
+    padding: 20px 20px 50px;
+  }
+
+  @include onDesktop {
+    padding: 20px 120px 50px;
+  }
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+}

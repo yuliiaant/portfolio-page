@@ -1,0 +1,56 @@
+@import "../../utils/variables.scss";
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+  border-top: 2px solid $Card-backround;
+
+  @include onDesktop {
+    margin-top: 246px;
+  }
+
+  &__name {
+    margin: 0;
+    background-image: linear-gradient(
+      0deg,
+      rgba(231, 15, 170, 1),
+      rgba(0, 192, 253, 1)
+    );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: right;
+
+    @include onDesktop {
+      flex-direction: row;
+      column-gap: 24px;
+    }
+  }
+
+  &__phone,
+  &__email {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    @include hover(transform, scale(1.1));
+
+    &:hover {
+      color: $Pink;
+      transition: $animationDuration;
+    }
+  }
+}

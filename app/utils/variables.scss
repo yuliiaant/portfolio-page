@@ -1,0 +1,44 @@
+$Bacground-dark: #191919;
+$Gray-text: #A7A7A7;
+$Gray-heading: #CCC;
+$Gray-about: #D9D9D9;
+$Card-backround: #363636;
+$Link: #FFF;
+$Pink: #E70FAA;
+
+$animationDuration: 0.2s;
+
+@mixin onTablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin hover($property, $toValue) {
+  transition: #{$property} $animationDuration;
+  &:hover {
+    #{$property}: $toValue;
+  }
+}
+
+@mixin pageGrid {
+  --columns: 1;
+  display: grid;
+  row-gap: 36px;
+  column-gap: 12px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @media (min-width: 759px) {
+    --columns: 2;
+  }
+
+  @media (min-width: 1200px) {
+    --columns: 3;
+  }
+}

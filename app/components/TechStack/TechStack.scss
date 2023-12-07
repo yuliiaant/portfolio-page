@@ -1,0 +1,39 @@
+@import "../../utils/variables.scss";
+
+.stack {
+  margin-top: 50px;
+  height: fit-content;
+
+  @include onDesktop {
+    margin-top: 246px;
+  }
+
+  &__icon {
+    width: 50%;
+    margin-top: 20px;
+    cursor: pointer;
+    @include hover(transform, scale(1.1));
+
+    @include onTablet {
+      width: 25%;
+    }
+
+    @include onDesktop {
+      width: 16%;
+      margin-top: 24px;
+    }
+  }
+}
+
+.section__text {
+  text-align: center;
+  &--header {
+    font-size: 48px;
+    color: $Gray-heading;
+  }
+
+  &--secondary {
+    font-size: 32px;
+    font-weight: normal;
+  }
+}
